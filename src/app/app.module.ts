@@ -9,6 +9,8 @@ import { FeaturesComponent } from './product/features/features.component';
 import { ControlsComponent } from './product/controls/controls.component';
 import { SliderComponent } from './product/slider/slider.component';
 import { HeaderComponent } from './shared/components/header/header.component';
+import { ProductsService } from './shared/services/products.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,9 +24,10 @@ import { HeaderComponent } from './shared/components/header/header.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ProductsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,72 @@
+.info {
+    &__brand {
+        text-transform: uppercase;
+        font-weight: bold;
+        width: fit-content;
+        margin-bottom: 30px;
+
+        &:after {
+            content: "";
+            width: 12px;
+            height: 1px;
+            position: absolute;
+            left: calc(100% + 5px);
+            top: 0px;
+            bottom: 0px;
+            margin: auto;
+            background: #000;
+
+
+        }
+    }
+
+    &__title {
+        word-spacing: 5px;
+        font-size: 20px;
+        line-height: 40px;
+        width: 70%;
+        // margin-bottom: 30px;
+        height: 120px;
+        font-weight: bolder;
+
+    }
+
+    &__text {
+        line-height: 30px;
+        height: 90px;
+        margin-bottom: 30px;
+        word-spacing: 3px;
+        width: 70%;
+        color: gray;
+    }
+
+    &__images {}
+
+    &__img {
+        height: 70px;
+        width: 70px;
+        overflow: hidden;
+
+        img {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            bottom: 0px;
+            right: 0px;
+            margin: auto;
+            min-width: 100%;
+            max-width: 100%;
+        }
+
+        &.active::after {
+            content: "";
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            background: #000;
+            opacity: .3;
+        }
+    }
+}

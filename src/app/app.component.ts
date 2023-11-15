@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductsService } from './shared/services/products.service';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit{
   title = 'sarmady';
-  constructor(){}
+  constructor(private prodService : ProductsService){}
   ngOnInit(): void {
-    alert("welcome")
+    this.prodService.getDate().subscribe(r => console.log(r))
   }
 }

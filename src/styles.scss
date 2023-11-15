@@ -1,1 +1,84 @@
-/* You can add global styles to this file, and also import other style files */
+/* please be informed that i'm using BEM convinsion for naming and nesting*/
+
+/*Grid Styles*/
+.flex {
+    display: flex;
+
+    &__align-center {
+        align-items: center;
+    }
+
+    &__justify-center {
+        justify-content: center;
+    }
+
+    &__space-between {
+        justify-content: space-between;
+    }
+
+    &__wrap {
+        flex-wrap: wrap;
+    }
+
+    &__reverse {
+        flex-direction: row-reverse;
+    }
+}
+
+/*Spacing*/
+.mt-15 {
+    margin-top: 15px;
+}
+
+.relative {
+    position: relative;
+}
+
+.shadow {
+    box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.04);
+}
+
+.mt-15 {
+    margin-top: 15px;
+}
+
+.mb-15 {
+    margin-bottom: 15px;
+}
+
+.mr-15 {
+    margin-right: 15px;
+}
+
+.ml-15 {
+    margin-left: 15px;
+}
+
+.mr-max {
+    margin-right: auto;
+}
+.ml-max {
+    margin-left: auto;
+}
+
+.m-auto {
+    margin: auto;
+}
+
+.d-block {
+    display: block !important;
+}
+
+/*Global Styles */
+.body-wrapper {
+    padding: 150px 120px 0px 120px;
+}
+.grid{
+
+    &__side{
+        width: 25%;
+    }
+    &__center{
+        width: 50%;
+    }
+}
