@@ -25,7 +25,7 @@ export class ProductComponent implements OnInit {
 
     this.prodService.getData()
       .subscribe(r => {
-        console.log(r);
+        // console.log(r);
         this.prodService.savedData = r;
         this.isFirstLoad ? this.selected = r[0].id : this.selected = this.prodService.selectedItem;
         this.isFirstLoad = false;

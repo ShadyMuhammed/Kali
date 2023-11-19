@@ -28,8 +28,6 @@ export class SliderComponent implements OnInit {
 
     this.tranform = e.offsetX / 20;
     let x = e.offsetX;
-    console.log(x)
-    // x = 0;
     if (when === "end") {
       this.tranform = 0;
       if (x > 250) {
