@@ -1,19 +1,12 @@
 <div class="info">
-    <div class="info__brand relative">fendi</div>
-    <div class="info__title">Black technical kint fabric high-tops</div>
-    <div class="info__text">Running sneakerswith thin elastoc laces</div>
+    <div class="info__brand relative">{{info.category}}</div>
+    <div class="info__title">{{info.title}}</div>
+    <div class="info__text">{{info.description}}</div>
     <div class="info__images flex">
-        <div class="info__img relative active">
-            <img src="../../../assets/images/1/black/1.jpg" alt="">
+        <div class="info__img relative" *ngFor="let img of images ; index as i" (click)="changeImage(img)"
+             [class.active]=" img === imgSrc">
+            <img src="{{img}}" alt="">
         </div>
-        <div class="info__img relative">
-            <img src="../../../assets/images/1/black/1.jpg" alt="">
-        </div>
-        <div class="info__img relative">
-            <img src="../../../assets/images/1/black/1.jpg" alt="">
-        </div>
-        <div class="info__img relative">
-            <img src="../../../assets/images/1/black/1.jpg" alt="">
-        </div>
+
     </div>
 </div>

@@ -1,1 +1,5 @@
-<p>slider works!</p>
+
+<div class="slider relative d-block" *ngIf="src">
+    <img [src]="src" alt="" [style.transform]="'translateX('+ tranform + 'px)'" (touchstart)="swipe($event, 'start')"
+        (touchend)="swipe($event, 'end')" (drag)="drag($event,'start')" (dragend)="drag($event,'end')">
+</div>

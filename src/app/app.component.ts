@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ProductsService } from './shared/services/products.service';
 
 @Component({
@@ -6,10 +6,7 @@ import { ProductsService } from './shared/services/products.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit{
+export class AppComponent{
   title = 'sarmady';
-  constructor(private prodService : ProductsService){}
-  ngOnInit(): void {
-    this.prodService.getDate().subscribe(r => console.log(r))
-  }
+ 
 }

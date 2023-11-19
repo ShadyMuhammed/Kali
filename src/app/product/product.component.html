@@ -11,4 +11,10 @@
     </div>
 </div>
 <app-controls></app-controls>
+<div class="video-layer" *ngIf="showVideo">
+    <div class="video-layer__content relative" >
+        <div class="video-layer__close" (click)="showVideo = false">close</div>
+        <iframe [src]="videoLink | safe" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
 </div>

@@ -1,60 +1,31 @@
 <div class="features">
     <div class="features__title">size</div>
     <div class="flex features__size">
-        <div class="features__size-item relative">
-            <input type="radio" class="features__size-input" name="size" id="37" checked>
-            <label class="features__size-label flex flex__align-center flex__justify-center" for="37">37</label>
-        </div>
-        <div class="features__size-item relative">
-            <input type="radio" class="features__size-input" name="size" id="38" disabled>
-            <label class="features__size-label flex flex__align-center flex__justify-center" for="38">37</label>
-        </div>
-        <div class="features__size-item relative">
-            <input type="radio" class="features__size-input" name="size" id="39">
-            <label class="features__size-label flex flex__align-center flex__justify-center" for="39">39</label>
-        </div>
-        <div class="features__size-item relative">
-            <input type="radio" class="features__size-input" name="size" id="40">
-            <label class="features__size-label flex flex__align-center flex__justify-center" for="40">40</label>
-        </div>
-        <div class="features__size-item relative">
-            <input type="radio" class="features__size-input" name="size" id="41">
-            <label class="features__size-label flex flex__align-center flex__justify-center" for="41">41</label>
+        <div class="features__size-item relative" *ngFor="let item of allSize; index as i;">
+            <input type="radio" class="features__size-input" name="size" id="{{item}}" [checked]="i === 0" [disabled]="!size.includes(item)">
+            <label class="features__size-label flex flex__align-center flex__justify-center" for="{{item}}">{{item}} </label>
         </div>
     </div>
     <div class="flex features__reviews">
         <div class="features__sub-title">reviews</div>
         <div class="flex features__stars ml-max">
-            <div class="features__star relative"></div>
-            <div class="features__star relative"></div>
-            <div class="features__star relative"></div>
-            <div class="features__star relative"></div>
-            <div class="features__star strok relative"></div>
+            <ng-container *ngIf="rateValues.length > 0">
+                <div class="features__star  relative" *ngFor="let star of rateValues" [class.strok]="star"></div>
+            </ng-container>
         </div>
     </div>
     <div class="flex features__price">
         <div class="features__sub-title">price</div>
-        <div class="features__price-text ml-max">$450</div>
+        <div class="features__price-text ml-max">${{featrues.price}}</div>
     </div>
     <div class="features__colors">
         <div class="features__title">colour</div>
         <div class="flex">
-            <div class="features__colors-item relative">
-                <input type="radio" name="color" id="color1" checked>
-                <label for="color1"></label>
+            <div class="features__colors-item relative" *ngFor="let color of featrues.colors;index as i">
+                <input type="radio" name="color" id="{{color.name}}" [checked]="i===0" (change)="changeColor(color.name)">
+                <label for="{{color.name}}" [style.background]="color.hex"></label>
             </div>
-            <div class="features__colors-item relative">
-                <input type="radio" name="color" id="color2">
-                <label for="color2"></label>
-            </div>
-            <div class="features__colors-item relative">
-                <input type="radio" name="color" id="color3">
-                <label for="color3"></label>
-            </div>
-            <div class="features__colors-item relative">
-                <input type="radio" name="color" id="color4">
-                <label for="color4"></label>
-            </div>
+       
         </div>
 
     </div>

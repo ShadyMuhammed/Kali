@@ -7,7 +7,14 @@
     padding: 25px;
     margin: auto;
 
-    &__play {}
+    &__play {
+        cursor: pointer;
+        &:hover{
+            .controls__play-text{
+                color: #000;
+            }
+        }
+    }
 
     &__play-icon {
 
@@ -20,7 +27,7 @@
     &__play-text {
         font-weight: bold;
         color: #666;
-
+        transition: .3s;
     }
 
     &__navigator {}
@@ -39,11 +46,13 @@
         font-weight: bold;
     }
     &__indexs-item{
-        height: 3px;
+        cursor: pointer;
+        height: 5px;
         border-radius: 2px;
         width: 35px;
         background: #c1c1c1;
         margin-right: 12px;
+        transition: .3s;
         &.active{
             background: #000;
         }

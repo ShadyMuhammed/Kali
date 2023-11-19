@@ -11,6 +11,7 @@ import { SliderComponent } from './product/slider/slider.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { ProductsService } from './shared/services/products.service';
 import { HttpClientModule } from '@angular/common/http';
+import { SafePipe } from './shared/pipes/safe.pipe';
 
 @NgModule({
   declarations: [
@@ -20,14 +21,14 @@ import { HttpClientModule } from '@angular/common/http';
     FeaturesComponent,
     ControlsComponent,
     SliderComponent,
-    HeaderComponent
-  ],
+    HeaderComponent,
+    SafePipe],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [ProductsService],
+  providers: [ProductsService, SafePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
